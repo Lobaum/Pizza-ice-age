@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    display: grid;
+}
+
+.red > img {
+    height: 60px;
+}
+
+.red {
+    background-color: rgb(13, 71, 142);
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+.menu > li {
+  align-items: center;
+  display: flex;
+  height: 60px;
+}
+
+
+.item {
+    background-image: linear-gradient(to right,#0cc6eb,#0cc6eb 50%,#ffffff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 10px;
+
+  }
+  
+  .item:before{
+    content: '';
+    background: #0cc6eb;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .item:hover {
+   background-position: 0;
+  }
+  
+  .item:hover::before{
+    width: 100%;
+  }
+
+/*SAINDO DO HEADER*/
+
+.pizza {  
+  background-image: url(/pizzaria/img/pizza.jpg);
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center; 
+  box-shadow: 0px 3px 5px rgb(67, 3, 187); 
+}
+
+.botao-vazado {
+  border: white 1px solid;
+  border-radius: 5px;
+  background-color: black;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  width: 100px;
+  box-shadow: 2px 2px 5px black;
+  opacity: 0.8;
+  transition: 300ms;
+}
+
+.banner {
+  text-shadow: 10px 5px 10px black;
+}
+
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  color: #0cc6eb;
+}
+
+hr {
+  border: none;
+  background-color: red;
+  height: 3px;
+  margin: 10px 20px;
+  background: linear-gradient(90deg, rgba(9,68,121,0.6980042016806722) 0%, rgba(0,212,255,1) 52%, rgba(9,68,121,0.695203081232493) 100%);
+
+}
+
+.sabores {
+  display: flex;
+  justify-content: center;
+}
+
+.sabor {
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  box-shadow: -5px 5px 7px 1px black;
+}
+
+.linha {
+  border: none;
+  background-color: rgb(0, 0, 0);
+  height: 3px;
+  margin: 10px 20px;
+  background: linear-gradient(90deg, rgba(9,68,121,0.21621148459383754) 0%, rgb(31, 183, 243) 52%, rgba(9,68,121,0.21621148459383754) 100%);
+}
+
+.nome {
+  text-align: center;
+}
+.preco {
+  text-align: center;
+}
+
+
+.rodape {
+    background-color: rgb(13, 71, 142);
+    display: flex;
+    justify-content: space-between;
+}
+
+.roda {
+  color: rgba(255, 255, 255, 0.679);
+}
+.promo{
+  display: flex;
+  overflow: scroll;
+}
+
+-promo::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media (max-width:500px) {
+  .sabores {
+    flex-direction: row;
+    margin: 10px;
+  }
+
+  .sabor {
+    min-width: 100%;
+  }
+}
