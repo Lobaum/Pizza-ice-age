@@ -69,7 +69,7 @@ body {
 /*SAINDO DO HEADER*/
 
 .pizza {  
-  background-image: url(/img/pizza.jpg);
+  background-image: url(img/pizza.jpg);
   height: 400px;
   display: flex;
   justify-content: center;
